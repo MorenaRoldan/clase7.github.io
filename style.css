@@ -1,0 +1,66 @@
+.contenedor{
+    display: grid;
+    grid-template-areas: "amarillo violeta verde"
+                         "rojo azul rosa"
+                         "negro celeste gris";
+}
+.amarillo{
+    background-color: yellow;
+    grid-area: amarillo;
+
+}
+.violeta{
+    background-color: violet;
+    grid-area: violeta;
+}
+.verde{
+    background-color: green;
+    grid-area: verde;
+}
+.rojo{
+    background-color: red;
+    grid-area: rojo;
+}
+.azul{
+    background-color: blue;
+    grid-area: azul;
+}
+.rosa{
+    background-color: pink;
+    grid-area: rosa;
+}
+.negro{
+    background-color: black;
+    grid-area: negro;
+}
+.celeste{
+    background-color: lightblue;
+    grid-area: celeste;
+}
+.gris{
+    background-color: gray;
+    grid-area: gris;
+}
+div{
+    border: 3px black solid;
+    height: 100px;
+    width: auto;
+    margin: 10px;
+}
+@media only screen and (max-width:480px){
+    .contenedor{
+        grid-template-areas: "rosa"
+                              "azul"
+                              "rojo";
+    }
+    .amarillo, .celeste, .gris, .negro,.verde,.violeta{display: none;}
+}
+@media only screen and (min-width:481px) and (max-width:768px){
+    .contenedor{
+        grid-template-areas: "amarillo violeta"
+                              "gris celeste"
+                              "negro verde";
+    } 
+    .rojo, .azul, .rosa{display: none;}
+
+}
